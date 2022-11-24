@@ -124,7 +124,7 @@ subset_sum = 53
 print( sum(my_list)/3)
 array_ = sub_set_sum( my_list, sum(my_list)/3)
 ```
-###### utilize the array of expected time to match all 53845 different subarray sequences that has the same target in order to find out all the 3 partition subarray sequence in the expected time array.
+###### utilize the array of expected time to match all 53845 different subarray sequences that has the same target in order to find out all ways of 3 partition subarray sequence in the expected time array. and there are roughtly 100k ways.  
 ```
 def check(b,my_list_):
     for element in b:
