@@ -1,14 +1,14 @@
 # flexsim
 # flexsim competition
 
-# use brute force to get the optimized order model:
-# there are 35! different sequences in 35 surgical cases. 
-# 35! = 371993326789901217467999448150835200000000
-# which makes brute force test all cases in flexsim impossible.
-# so we decide to switch to greedy
-# 1st step is form a array of all expected surgical time. 
-# The code below will get this whole array of all expected surgical time：
-# [59, 31, 39, 30, 35, 108, 113, 135, 44, 48, 124, 55, 30, 48, 74, 71, 113, 74, 74, 26, 26, 122, 92, 113, 43, 23, 43, 74, 74, 39, 39, 39, 39, 113, 31]
+###### use brute force to get the optimized order model:
+###### there are 35! different sequences in 35 surgical cases. 
+###### 35! = 371993326789901217467999448150835200000000
+###### which makes brute force test all cases in flexsim impossible.
+###### so we decide to switch to greedy
+###### 1st step is form a array of all expected surgical time. 
+###### The code below will get this whole array of all expected surgical time：
+###### [59, 31, 39, 30, 35, 108, 113, 135, 44, 48, 124, 55, 30, 48, 74, 71, 113, 74, 74, 26, 26, 122, 92, 113, 43, 23, 43, 74, 74, 39, 39, 39, 39, 113, 31]
 
 ```
 
@@ -99,9 +99,9 @@ with open('sample.csv', newline='') as csvfile:
       
 print(Expected_Surgical_Time)
 ```
-# 2nd step is to split the array into three equal sum of expected surgical time:
-# I use the code below to find all the subarray sequences that equals to the 747 (target sum = sum of array_expected_time/3)
-# and there is 53845 different sequences that has the same target sum 747. 
+###### 2nd step is to split the array into three equal sum of expected surgical time:
+###### I use the code below to find all the subarray sequences that equals to the 747 (target sum = sum of array_expected_time/3)
+###### and there is 53845 different sequences that has the same target sum 747. 
 ```
 from itertools import combinations
 
@@ -124,7 +124,7 @@ subset_sum = 53
 print( sum(my_list)/3)
 array_ = sub_set_sum( my_list, sum(my_list)/3)
 ```
-# utilize the array of expected time to match all 53845 different subarray sequences that has the same target in order to find out all the 3 partition subarray sequence in the expected time array.
+###### utilize the array of expected time to match all 53845 different subarray sequences that has the same target in order to find out all the 3 partition subarray sequence in the expected time array.
 ```
 def check(b,my_list_):
     for element in b:
