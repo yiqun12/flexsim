@@ -5,7 +5,7 @@
 ###### there are 35! different sequences in 35 surgical cases. 
 ###### 35! = 371993326789901217467999448150835200000000
 ###### which makes brute force test all cases in flexsim impossible.
-###### so we decide to switch to greedy
+###### so we decide to switch use greedy approach to minimize the size of sequences set.
 ###### 1st step is form a array of all expected surgical time. 
 ###### The code below will get this whole array of all expected surgical time：
 ###### [59, 31, 39, 30, 35, 108, 113, 135, 44, 48, 124, 55, 30, 48, 74, 71, 113, 74, 74, 26, 26, 122, 92, 113, 43, 23, 43, 74, 74, 39, 39, 39, 39, 113, 31]
@@ -99,9 +99,9 @@ with open('sample.csv', newline='') as csvfile:
       
 print(Expected_Surgical_Time)
 ```
-###### 2nd step is to split the array into three equal sum of expected surgical time:
-###### I use the code below to find all the subarray sequences that equals to the 747 (target sum = sum of array_expected_time/3)
-###### and there is 53845 different sequences that has the same target sum 747. 
+###### 2nd step is to form array set that split the array into three equal sum of expected surgical time:
+###### I use the code below to find all the sequences subarray that equals to the 747 (target sum = sum of array_expected_time/3)
+###### and there is 53845 different sequences subarray that has the same target sum 747. 
 ```
 from itertools import combinations
 
@@ -124,7 +124,7 @@ subset_sum = 53
 print( sum(my_list)/3)
 array_ = sub_set_sum( my_list, sum(my_list)/3)
 ```
-###### utilize the array of expected time to match all 53845 different subarray sequences that has the same target in order to find out all ways of 3 partition subarray sequence in the expected time array. and there are roughtly 100k ways.  
+###### utilize the array of expected time array to match all 53845 different sequences subarray in order to generate the sequences set that contains all the equal-sum sequences.
 ```
 def check(b,my_list_):
     for element in b:
@@ -163,9 +163,11 @@ for b1 in range(len(b)):
        
 ```
 
-###### since we have 100k ways of partitioning the expected time array in three. We need to eleminate the wrong sequences as much as possible 
-###### next step: add objectives to eliminate the wrong sequences. 
-###### objectives1: some surgery can only operate in operating room 1. these surgery must be in the same subarray of the sequences set.eleminate those do not containes all the operating room1 surgery.
-###### objective2: better assigned the surgeon at a suitable time interval.
+###### since we have 100k ways of equal-sum sequences. We need to eleminate the sequences as much as possible in our sequence set.
+###### next step: add objectives/constrains to eliminate the wrong sequences. 
+###### constrain1: some surgery can only operate in operating room 1. these surgeries must be in the same subarray of the sequences set. Eleminate sequences that do not containes all the operating room1 surgery in sequences subarray.
+###### objective1: better assigned the surgeon at a suitable time interval.
+###### more .... 
 ```
+
 ```
