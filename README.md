@@ -101,6 +101,7 @@ print(Expected_Surgical_Time)
 ```
 ###### 2nd step is to form array set that split the sequences into three equal sum subarray of expected surgical time:
 ###### I use the code below to find all the sequences subarray that equals to the 747 ( target = sum of array_expected_time/3)
+###### time complexity 2^n in this case: 2^30 = 1073741824 times. takes 2 hours
 ###### and there is 53845 different subarray that has the same target sum 747. 
 ```
 from itertools import combinations
@@ -124,7 +125,7 @@ subset_sum = 53
 print( sum(my_list)/3)
 array_ = sub_set_sum( my_list, sum(my_list)/3)
 ```
-###### utilize the array of expected time array to match all 53845 different sequences subarray in order to generate the sequences set that contains all the possible sequences. The result is there are 100 thousands different sequences that can be divided in 3 equal sum subarrays
+###### utilize the array of expected time array to match all 53845 different sequences subarray in order to generate the sequences set that contains all the possible sequences. The result is there are 100 thousands different sequences that can be divided in 3 equal sum subarrays. time complexity O(n^2)  = 53845^2/2 = 1449642012 times takes probably 4 hours
 ```
 def check(b,my_list_):
     for element in b:
