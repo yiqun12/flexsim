@@ -162,3 +162,7 @@ for b1 in range(len(b)):
             global_yes.append(sorted([ b1_sort, b0_sort, b2_sort]))
        
 ```
+###### since we have 100k ways of partitioning the expected time array in three. We need to eleminate the wrong sequences as much as possible 
+###### next step: add objectives to eliminate the wrong sequences. 
+###### objectives1: some surgery can only operate in operating room 1. these surgery must be in the same subarray of the sequences set.eleminate those do not containes all the operating room1 surgery.
+###### objective2: better assigned the surgeon at a suitable time interval.
