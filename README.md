@@ -168,6 +168,8 @@ for b1 in range(len(b)):
 ###### constrain1: some surgery can only operate in operating room 1. these surgeries must be in the same subarray of the sequences set. Eleminate sequences that do not containes all the operating room1 surgery in sequences subarray.
 ###### objective1: better assigned the surgeon at a suitable time interval.
 ###### more .... 
+
+###### my goal is to have probably 1-10 thousands excel sheets and test them all in flexsim. It can be done automaticcally since flexsim is able run mutiple excel sheet at once.  
 ```
 
 ```
