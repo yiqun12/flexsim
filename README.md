@@ -159,5 +159,5 @@ for b1 in range(len(b)):
         b2_sort = sorted(thirdlist(b[b0],b[b1]))
         if(sorted([ b1_sort, b0_sort, b2_sort]) not in global_yes):
             global_yes.append(sorted([ b1_sort, b0_sort, b2_sort]))
-        
+       
 '''
